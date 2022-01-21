@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@mixin tablette {
+    @media (min-width: 768px) and (max-width: 1080px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1080px) {
+        @content;
+    }
+}
+
 .flex {
     display: flex;
 }
 body {
     font-family: Roboto, sans-serif;
-    scroll-behavior: smooth;
 }
 
 a {
@@ -80,11 +92,23 @@ a {
     padding: 1rem;
     &__title {
         font-size: x-large;
+        @include tablette {
+            text-align: center;
+        }
     }
     &__list {
         list-style: none;
         counter-reset: count_list;
         padding-left: 1rem;
+        @include desktop {
+            display: flex;
+        }
+        @include tablette {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__description{
         padding: 1.5rem;
@@ -95,6 +119,20 @@ a {
         display: flex;
         position: relative;
         font-weight: 600;
+        @include desktop {
+            flex-grow: 1;
+            margin-right: 1rem;
+        }
+        @include tablette {
+            width: 25rem;
+            justify-content: center;
+        }
+        &:hover {
+            background-color: lighten($color: #9356dc, $amount: 35%);
+            i {
+                color: #9356dc;
+            }
+        }
         &::before {
             counter-increment: count_list 1;
             content: counter(count_list) "";
@@ -122,19 +160,45 @@ a {
 
 .restaurant {
     padding: 1rem;
-    flex-direction: column;
     background-color: #f6f6f6;
+    flex-direction: column;
     padding-bottom: 4rem;
+    &__cards {
+        flex-direction: column;
+        @include tablette {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            column-gap: 2rem;
+        }
+    }
 }
 
 .card {
     flex-direction: column;
     justify-content: center;
+    position: relative;
     height: 250px;
     background-color: #fff;
     margin: 0.5rem 0;
     border-radius: 1rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    &__new {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #99E2D0;
+        color: darken($color: #99E2D0, $amount: 40%);
+        font-size: small;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.1rem;
+        font-weight: 500;
+    }
     &__img {
         object-fit: cover;
         height: 70%;
@@ -202,13 +266,15 @@ a {
     &__title {
         justify-content: space-between;
         align-items: center;
+        padding-left: .5rem;
         i {
             font-size: 2rem;
             margin-right: 2rem;
+            padding-left: 1rem;
         }
         h2 {
             font-family: Shrikhand, sans-serif;
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: 500;
         }
     }
@@ -240,6 +306,9 @@ a {
 .part {
     flex-direction: column;
     overflow: hidden;
+    @include desktop {
+        flex-grow: 1;
+    }
     &__title {
         font-weight: 400;
         margin-bottom: 5px;
@@ -250,6 +319,11 @@ a {
             background-color: #99e2d0;
             margin-bottom: 15px;
             margin-left: .8rem;
+        }
+    }
+    &__items {
+        @include desktop {
+            display: flex;
         }
     }
     &__list {
