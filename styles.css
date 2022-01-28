@@ -103,6 +103,18 @@ a {
   margin-bottom: -3rem;
 }
 
+.button__size2 {
+  height: 3rem;
+  width: 14rem;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background: linear-gradient(-15deg, rgba(147, 86, 220, 0.7), rgba(255, 121, 218, 0.7));
+  -webkit-box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
 .tuto {
   padding: 1rem;
 }
@@ -240,8 +252,7 @@ a {
   .restaurant__cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
     row-gap: 2rem;
@@ -252,8 +263,7 @@ a {
   .restaurant__cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
   }
@@ -496,16 +506,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  -webkit-animation: text-appear 0.7s ease-out forwards;
-          animation: text-appear 0.7s ease-out forwards;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-animation: text-appear 0.7s ease-out both;
+          animation: text-appear 0.7s ease-out both;
   cursor: pointer;
 }
 
 .part__card:hover .part__card__check {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
           flex: 30%;
@@ -669,8 +675,8 @@ a {
           justify-content: center;
   -webkit-animation: loader 0.01s;
           animation: loader 0.01s;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -694,20 +700,20 @@ a {
 
 .spinner__item--1 {
   background-color: #9356dc;
-  -webkit-animation: fade .75s ease-in-out 5 both;
-          animation: fade .75s ease-in-out 5 both;
+  -webkit-animation: fade .75s ease-in-out 4 both;
+          animation: fade .75s ease-in-out 4 both;
 }
 
 .spinner__item--2 {
   background-color: #ff79da;
-  -webkit-animation: fade .75s ease-in-out 0.25s 5 both;
-          animation: fade .75s ease-in-out 0.25s 5 both;
+  -webkit-animation: fade .75s ease-in-out 0.25s 4 both;
+          animation: fade .75s ease-in-out 0.25s 4 both;
 }
 
 .spinner__item--3 {
   background-color: #99E2D0;
-  -webkit-animation: fade .75s ease-in-out .5s 5 both;
-          animation: fade .75s ease-in-out .5s 5 both;
+  -webkit-animation: fade .75s ease-in-out .5s 4 both;
+          animation: fade .75s ease-in-out .5s 4 both;
 }
 
 @-webkit-keyframes fade {

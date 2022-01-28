@@ -10,125 +10,146 @@
     <title>Le délice des sens</title>
 </head>
 <body>
-    <header>
-        <div>
-            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+    <header class="header flex">
+        <div class="header__logo flex">
+            <a href="index.html"><i class="fas fa-arrow-left header__arrow"></i></a>
             <img src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </div>
     </header>
-
-    <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat à la française">
-    <main>
-        <div>
-            <h2>Le délice des sens</h2>
-            <i class="far fa-heart"></i>
-        </div>
-
-        <section>
-            <div>
+    <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat le délice des sens" class="background-image">
+    <main class="main">
+        <section class="menu flex">
+            <div class="menu__title flex">
+                <h2>Le délice des sens</h2>
+                <i class="far fa-heart menu__heart"></i>
+            </div>
+            <section class="part__items">
+            <div class="part flex">
                 <div>
-                    <h3>ENTREES</h3>
+                    <h3 class="part__title">ENTREES</h3>
+                    <div class="part__title--underline"></div>
                 </div>
-                <div>
-                    <div>
-                        <div>
+                <div class="flex part__list">
+                    <div class="flex part__card delay2">
+                        <div class="part__card__description">
                             <h3>Tartare de thon</h3>
                             <p>Assaisonné au yuzu</p>
                         </div>
-                        <p>25€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Bouchée de homard croustillant</h3>
-                            <p>Et sa farandole de petits légules</p>
+                        <p class="part__card__price">25€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
                         </div>
-                        <p>35€</p>
-                        <i class="fas fa-check-circle"></i>
                     </div>
-                    <div>
-                        <div>
+                    <div class="flex part__card delay3">
+                        <div class="part__card__description">
+                            <h3>Bouchée de homard croustillant</h3>
+                            <p>Et sa farandole de petits légumes</p>
+                        </div>
+                        <p class="part__card__price">35€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="flex part__card delay4">
+                        <div class="part__card__description">
                             <h3>Velouté de cèpes</h3>
                             <p>Aux truffes</p>
                         </div>
-                        <p>20€</p>
-                        <i class="fas fa-check-circle"></i>
+                        <p class="part__card__price">20€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="part flex">
                 <div>
-                    <h3>PLATS</h3>
+                    <h3 class="part__title">PLATS</h3>
+                    <div class="part__title--underline"></div>
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <h3>Poulet rôti aux herbes de provence</h3>
+                <div class="flex part__list">
+                    <div class="part__card delay6 flex">
+                        <div class="part__card__description">
+                            <h3>Poulet rôti aux herbes de Provence</h3>
                             <p>Et sa crème de truffe</p>
                         </div>
-                        <p>40€</p>
-                        <i class="fas fa-check-circle"></i>
+                        <p class="part__card__price">40€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
                     </div>
-                    <div>
-                        <div>
+                    <div class="part__card flex delay7">
+                        <div class="part__card__description">
                             <h3>Langouste rôtie</h3>
                             <p>Et ses légumes de saison</p>
                         </div>
-                        <p>35€</p>
-                        <i class="fas fa-check-circle"></i>
+                        <p class="part__card__price">35€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
                     </div>
-                    <div>
-                        <div>
-                            <h3>Côte de boeuf angus</h3>
+                    <div class="part__card delay8 flex">
+                        <div class="part__card__description">
+                            <h3>Côte de boeuf Angus</h3>
                             <p>Et sa purée de panais</p>
                         </div>
-                        <p>44€</p>
-                        <i class="fas fa-check-circle"></i>
+                        <p class="part__card__price">44€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="part flex">
                 <div>
-                    <h3>DESSERTS</h3>
+                    <h3 class="part__title">DESSERTS</h3>
+                    <div class="part__title--underline"></div>
                 </div>
-                <div>
-                    <div>
-                        <div>
+                <div class="flex part__list">
+                    <div class="part__card delay10 flex">
+                        <div class="part__card__description">
                             <h3>Farandole de desserts</h3>
                             <p>Du chef</p>
                         </div>
-                        <p>18€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Crême brulée</h3>
-                            <p>Revisité</p>
+                        <p class="part__card__price">18€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
                         </div>
-                        <p>22€</p>
-                        <i class="fas fa-check-circle"></i>
                     </div>
-                    <div>
-                        <div>
+                    <div class="part__card flex delay11">
+                        <div class="part__card__description">
+                            <h3>Crème brulée</h3>
+                            <p>Revisitée</p>
+                        </div>
+                        <p class="part__card__price">22€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="part__card delay12 flex">
+                        <div class="part__card__description">
                             <h3>Tiramisu</h3>
                             <p>À la noisette</p>
                         </div>
-                        <p>23€</p>
-                        <i class="fas fa-check-circle"></i>
+                        <p class="part__card__price">23€</p>
+                        <div class="part__card__check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
                     </div>
                 </div>
             </div>
+            </section>
+            <div class="btn flex">
+                <button class="button button__size">Commander</button>
+            </div>
         </section>
-
-        <div>
-            <button>Commander</button>
-        </div>
-    <footer>
-        <h2 class="footer__img">ohmyfood</h2>
-        <p><a href="#">Proposer un restaurant</a></p>
-        <p><a href="#">Devenir partenaire</a></p>
-        <p><a href="#">Mentions légales</a></p>
-        <p><a href="mailto:email@sample.com">Contact</a></p>
-    </footer> 
+        </main>
+        <footer class="footer flex">
+            <h2 class="footer__img">ohmyfood</h2>
+            <a href="#" class="footer__link"><i class="fas fa-utensils footer__logo"></i>Proposer un restaurant</a>
+            <a href="#" class="footer__link"><i class="fas fa-hands-helping footer__logo"></i>Devenir partenaire</a>
+            <a href="#" class="footer__link">Mentions légales</a>
+            <a href="mailto:email@sample.com" class="footer__link">Contact</a>
+        </footer>
 </body>
 </html>

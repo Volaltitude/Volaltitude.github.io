@@ -86,6 +86,15 @@ a {
         margin-top: 2rem;
         margin-bottom: -3rem;
     }
+    &__size2 {
+        height: 3rem;
+        width: 14rem;
+        margin-top: 1rem;
+    }
+    &:hover {
+        background: linear-gradient(-15deg,rgba(147,86,220,.7),rgba(255,121,218,.7));
+        box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+    }
 }
 
 .tuto {
@@ -338,12 +347,10 @@ a {
         align-items: center;
         justify-content: space-between;
         position: relative;
-        animation: text-appear 0.7s ease-out forwards;
-        transform: scale(0);
+        animation: text-appear 0.7s ease-out both;
         cursor: pointer;
         &:hover {
              .part__card__check{
-                transform: translateX(0px);
                 flex: 30%;
             }
             i {
@@ -422,7 +429,7 @@ a {
     align-items: center;
     justify-content: center;
     animation: loader 0.01s;
-    animation-delay: 4s;
+    animation-delay: 3s;
     animation-fill-mode: both;
     &__container {
         display: flex;
@@ -436,15 +443,15 @@ a {
         border-radius: 1rem;
         &--1{
             background-color: #9356dc;
-            animation: fade .75s ease-in-out 5 both;
+            animation: fade .75s ease-in-out 4 both;
         }
         &--2{
             background-color: #ff79da;
-            animation: fade .75s ease-in-out 0.25s 5 both;
+            animation: fade .75s ease-in-out 0.25s 4 both;
         }
         &--3{
             background-color: #99E2D0;
-            animation: fade .75s ease-in-out .5s 5 both;
+            animation: fade .75s ease-in-out .5s 4 both;
         }
     }
 }
