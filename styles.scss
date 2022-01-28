@@ -349,6 +349,9 @@ a {
         position: relative;
         animation: text-appear 0.7s ease-out both;
         cursor: pointer;
+        @include desktop {
+
+        }
         &:hover {
              .part__card__check{
                 flex: 30%;
